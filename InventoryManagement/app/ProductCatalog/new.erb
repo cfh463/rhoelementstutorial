@@ -1,0 +1,35 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @productcatalog.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @productcatalog.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="productcatalog[Name]" class="fieldLabel">Name</label>
+            <input type="text" id="productcatalog[Name]" name="productcatalog[Name]" <%= placeholder("Name") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="productcatalog[SKU]" class="fieldLabel">Sku</label>
+            <input type="text" id="productcatalog[SKU]" name="productcatalog[SKU]" <%= placeholder("Sku") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="productcatalog[Image]" class="fieldLabel">Image</label>
+            <input type="text" id="productcatalog[Image]" name="productcatalog[Image]" <%= placeholder("Image") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

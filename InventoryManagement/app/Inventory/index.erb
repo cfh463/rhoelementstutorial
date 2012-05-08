@@ -1,0 +1,43 @@
+<div data-role="page">
+
+	<div data-role="header" data-position="inline">
+    <h1>Inventories</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse" <%= "data-ajax='false'" if is_bb6 %>>
+      Home
+    </a>
+    <a href="<%= url_for :action => :new %>" class="ui-btn-right" data-icon="plus">
+      New
+    </a>
+	</div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <% @inventories.each do |inventory| %>
+        <%
+                  product = ProductCatalog.find(
+                        :first,
+                        :conditions => {:SKU => inventory.SKU}
+                      )   
+                  if product
+                    name = product.Name
+                     if product.Image
+                          isrc = product.Image
+                     end                
+                  else
+                     name = inventory.SKU
+                  end
+        %>
+      
+        <li>
+                    <a href="<%= url_for :action => :edit, :id => inventory.object %>">
+                      <img src="<%= isrc %>" class="ui-li-thumb">
+                      <%= name %>
+                      <span class="ui-li-count ui-btn-up-c ui-btn-corner-all"><%= inventory.Quantity %></span>
+                    </a>
+           </li>
+
+      <% end %>
+    </ul>
+  </div>
+
+</div>

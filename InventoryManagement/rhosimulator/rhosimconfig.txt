@@ -1,0 +1,9 @@
+rhodes_path='C:/MotorolaRhoMobileSuite/ruby/lib/ruby/gems/1.9.1/gems/rhodes-3.3.3.beta.5.18'
+app_version='1.0'
+app_name='InventoryManagement'
+reload_app_changes=0
+debug_port=
+debug_host='127.0.0.1'
+platform='android'
+os_version='2.1'
+ext_path=C:/MotorolaRhoMobileSuite/ruby/lib/ruby/gems/1.9.1/gems/rhodes-3.3.3.beta.5.18/lib/extensions/json;C:/MotorolaRhoMobileSuite/ruby/lib/ruby/gems/1.9.1/gems/rhoelements-2.0.0.beta.5.18/libs/motoapi;

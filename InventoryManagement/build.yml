@@ -1,0 +1,27 @@
+sdkversion: "3.3.3"
+name: "InventoryManagement"
+version: "1.0"
+vendor: "rhomobile"
+build: "debug"
+bbver: "4.6"
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator5.0"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.inventorymanagement"
+  BundleURLScheme: "inventorymanagement"
+wp:
+  productid: "a2362df0-7a7e-012f-c979-00ff70434f05"
+symbian:
+  uid: "0xe000ce5b"
+android:
+  version: "2.1"
+extensions:
+  - json
+  - another-extension
+app_type: "rhoelements"
+wm:
+  sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
